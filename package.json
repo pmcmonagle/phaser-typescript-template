@@ -1,0 +1,27 @@
+{
+  "name": "timberland-tally-prototype",
+  "version": "1.0.0",
+  "description": "Prototype of the mPower Grade 2 game; Timberland Tally",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify src/main.ts -p [ tsify --noImplicitAny ] > dist/main.js",
+	"dev": "budo src/main.ts:dist/main.js --live -d dist -- -p [ tsify --noImplicitAny ]"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.tvo.org:pmcmonagle/timberland-tally-prototype.git"
+  },
+  "author": "Paul McMonagle <mcmonagle.paul@gmail.com> (http://github.com/pmcmonagle)",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/browserify": "^12.0.33",
+    "browserify": "^15.2.0",
+    "budo": "^11.0.1",
+    "tsify": "^3.0.4",
+    "typescript": "^2.7.1"
+  },
+  "dependencies": {
+    "phaser": "^2.6.2"
+  }
+}
